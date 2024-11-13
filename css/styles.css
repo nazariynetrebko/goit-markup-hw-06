@@ -828,6 +828,7 @@ textarea {
 }
 
 .newsletter-form {
+  gap 24px 
   display: flex;
   margin-left: 80px;
   width: 100%;
