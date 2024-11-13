@@ -73,7 +73,7 @@ textarea {
 .modal-overlay.is-open {
   opacity: 1;
   pointer-events: auto;
-  transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -106,10 +106,12 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn:hover,
@@ -163,6 +165,14 @@ textarea {
   margin-left: 19px;
 }
 
+.form-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .form-input {
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -173,9 +183,13 @@ textarea {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-label .form-input:active,
-.input-label .form-input:focus {
+.form-input:active,
+.form-input:focus {
   border-color: #4d5ae5;
+}
+
+.input-wrap:focus-within .form-icon {
+  fill: #4d5ae5;
 }
 
 .textarea-wrap {
@@ -233,7 +247,9 @@ textarea {
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden[type='checkbox']:checked + label span {
@@ -265,22 +281,6 @@ textarea {
 .send-btn:hover,
 .send-btn:focus {
   background-color: #404bbf;
-}
-
-.username-icon,
-.phone-icon,
-.email-icon {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.input-label:focus-within .phone-icon,
-.input-label:focus-within .username-icon,
-.input-label:focus-within .email-icon {
-  fill: #4d5ae5;
 }
 
 /* #endregion */
