@@ -6,6 +6,16 @@ body {
   background-color: #ffffff;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
 .image {
   display: block;
   width: 100%;
@@ -161,12 +171,6 @@ textarea {
   position: relative;
 }
 
-.input-title {
-  position: absolute;
-  margin-top: 32px;
-  margin-left: 19px;
-}
-
 .form-icon {
   position: absolute;
   left: 16px;
@@ -199,7 +203,6 @@ textarea {
 }
 
 .textarea {
-  margin-bottom: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding: 8px 16px;
@@ -831,15 +834,14 @@ textarea {
   height: 40px;
 }
 
-.newsletter-container {
+.footer-form-wrap {
+  margin-left: auto;
 }
 
 .newsletter-form {
   gap: 24px;
   display: flex;
-  margin-left: 80px;
   width: 100%;
-  align-items: flex-end;
 }
 
 .subscribe-title {
@@ -849,6 +851,7 @@ textarea {
   line-height: 150%;
   letter-spacing: 0.02em;
 
+  margin-top: 0;
   margin-bottom: 16px;
 }
 
@@ -874,6 +877,11 @@ textarea {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+.newsletter-input:focus,
+.newsletter-input:active {
+  border-color: #4d5ae5;
+}
+
 .newsletter-input::placeholder {
   color: #ffffff;
 }
@@ -888,7 +896,6 @@ textarea {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  margin-left: 24px;
   height: 40px;
   min-width: 165px;
   cursor: pointer;
