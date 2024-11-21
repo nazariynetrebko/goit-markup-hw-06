@@ -54,16 +54,16 @@
             </li>
           </ul>
         </address>
-        <button class="menu-btn" type="button">
+        <button class="menu-btn" type="button" data-menu-open>
           <svg class="icon-menu" width="24" height="24">
             <use href="./images/icons.svg#icon-menu"></use>
           </svg>
         </button>
       </div>
 
-      <div class="mobile-menu">
+      <div class="mobile-menu" data-menu>
         <div class="container mobile-menu-container">
-          <button class="mobile-menu-btn">
+          <button class="mobile-menu-btn" data-menu-close>
             <svg class="menu-icon" width="8" height="8">
               <use href="./images/icons.svg#icon-close"></use>
             </svg>
@@ -136,7 +136,9 @@
       <section class="section-header">
         <div class="container hero-image">
           <h1 class="page-title">Effective Solutions for Your Business</h1>
-          <button class="button" type="button">Order Service</button>
+          <button class="button" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <!-- end hero section -->
@@ -438,7 +440,7 @@
                   alt="Cashless payment"
                   class="image"
                   srcset="
-                    ./images/Portfolio/banking-app.jpg         1x,
+                    ./images/Portfolio/cashless-payment.jpg    1x,
                     ./images/Portfolio/cashless-payment@2x.jpg 2x
                   "
                   src="./images/Portfolio/cashless-payment.jpg"
@@ -548,7 +550,7 @@
       <!-- end portfolio section -->
     </main>
     <!-- footer -->
-    <footer class="footer-section hidden">
+    <footer class="footer-section">
       <div class="container footer-container">
         <div class="logo-container">
           <a class="link-logo" href="./index.html"
@@ -592,7 +594,6 @@
             </li>
           </ul>
         </div>
-
         <div class="footer-form-wrap">
           <p class="subscribe-title">Subscribe</p>
           <form class="newsletter-form" name="newsletter-form">
@@ -616,9 +617,9 @@
       </div>
     </footer>
     <!-- modal window -->
-    <div class="modal-overlay is-open hidden">
+    <div class="modal-overlay is-open" data-modal>
       <div class="modal">
-        <button class="close-btn" type="button">
+        <button data-modal-close class="close-btn" type="button">
           <svg class="icon-close" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -704,5 +705,8 @@
         </form>
       </div>
     </div>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
