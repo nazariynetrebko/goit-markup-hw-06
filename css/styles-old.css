@@ -217,6 +217,7 @@ ul {
 }
 
 .ckeckbox-label {
+  align-items: center;
   color: #8e8f99;
   font-weight: 400;
   font-size: 12px;
@@ -235,6 +236,7 @@ ul {
 }
 
 .checked-span {
+  flex-shrink: 0;
   margin-right: 8px;
   width: 16px;
   height: 16px;
