@@ -1329,6 +1329,7 @@ li {
 }
 
 .checked-span {
+  cursor: pointer;
   flex-shrink: 0;
   margin-right: 8px;
   width: 16px;
